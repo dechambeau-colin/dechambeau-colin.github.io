@@ -1,321 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Colin DeChambeau - Electrical Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin DeChambeau - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
- <div class = "cursor_light"> </div>
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <a href="index.html" class="header-btn">Home</a>
-      <li><a href="#about" class="header-btn">About</a></li>
-      <li><a href="#projects" class="header-btn">Projects</a></li>
-      <li><a href="#resume" class="header-btn">Resume</a></li>
-      <li><a href="#contact" class="header-btn">Contact</a></li>
-      <li><a href="customize.html" class="header-btn">Customize</a></li>
-      
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero fade-in">
-    <div class="intro-text">
-      <h1>Hi,<br>I'm <span>Colin DeChambeau</span><br>Electrical Engineer</h1>
-      <a href="#contact" class="btn">Contact</a>
+<nav>
+    <div class="nav-container nav-flex">
+        <div class="nav-right">
+            <a href="Colin DeChambeau, Electrical Engineering.pdf" target="_blank" class="nav-link">Resume</a>
+            
+            <div class="dropdown">
+                <input type="checkbox" id="dropdown-toggle">
+                <label for="dropdown-toggle" class="dropbtn">Projects</label>
+                <div class="dropdown-content">
+                    <a href="project1.html">Motion Activated Gate</a>
+                    <a href="project2.html">Pulse Width Modulation</a>
+                    <a href="project3.html">Sensor and Alarm System</a>
+                    <a href="project4.html">Analog Synthesizer - VCO</a>
+                    <a href="project5.html">LED Memory Game</a>
+                    <a href="project6.html">BASYS Board Calculator</a>
+                    <a href="project7.html">Sensor and Alarm System</a>
+                    <a href="project8.html">Sensor and Alarm System</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="intro-img">
-      <img src="images/profile_pic1.JPG" alt="Colin Headshot" />
+</nav>
+
+<header>
+    <div class="container">
+        <div class="header-flex">
+            <!-- Profile picture: replace 'your-photo.jpg' with your actual image file -->
+            <div class="profile-pic-wrapper">
+                <img src="photo1.jpg" alt="Colin DeChambeau" class="profile-pic"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Placeholder shown if no image is found -->
+                <div class="profile-pic-placeholder">
+                    <span>CD</span>
+                </div>
+            </div>
+            <div class="header-text">
+                <h1>Colin DeChambeau</h1>
+                <p>Hi, I'm Colin DeChambeau,</p>
+                <p>Electrical Engineering undergraduate at Rensselaer Polytechnic Institute.</p>
+                <p>This is my portfolio website where I keep documentation of the projects I create at RPI and in my free time.</p>
+                <p>When I am not working on projects or studying, I enjoy hiking, competing in triathlons, doing film photagraphy, 
+                    and playing guitar. I'm an active member of the RPI IEEE student branch specifically 
+                    the Electronics Packaging Society, as well as the RPI swim club, run club, and Robotics Club.</p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
     </div>
-  </header>
+</header>
 
-  <!-- Main Sections -->
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-   <p>I'm an Electrical Engineering student at Rensselaer Polytechnic Institute, graduating in 2028. 
-    My interests lie in control systems, autonomy, and embedded applications that utilize microcontrollers. 
-    I've developed embedded systems across multiple EE domains, with a particular focus on sensor integration and real-world automation.</p>
-
-<p>Outside the lab, I train for triathlons with the long-term goal of completing an Ironman. 
-  I also enjoy photography, playing guitar, and visiting national parks. I've explored 3 of the 63 so far, and plan to see them all someday.</p>
-
-
- <div class="photo-showcase">
-  <img id="slideshow" src="images/photo2.jpg" alt="Slideshow Image">
-  <img class="profile-pic" src="images/photo1.jpg" alt="Profile Picture">
-</div>
-
-
-
-    </section>
-  
-
-  <section id="projects" class="fade-in">
-    <h2>Projects</h2>
-    <p>Here are some projects I have worked on either in class at RPI, or during my free time.</p>
-     <div class="project-grid">
-
-    <a href="projects/project1.html" class="project-card">
-      <img src="images/project1.jpg" alt="Project 1" />
-      <div class="overlay">
-  <div class="overlay-text">
-    <h3>ESP32 Motion Activated Gate</h3>
-    <p>Personal</p>
-  </div>
-</div>
-    </a>
-
-     <a href="projects/project2.html" class="project-card">
-      <img src="images/project2.jpg" alt="Project 2" />
-      <div class="overlay">
-  <div class="overlay-text">
-    <h3>Sensor and Alarm System</h3>
-    <p>ECSE 1010 - Group Project</p>
-  </div>
-</div>
-    </a>
-
-    <a href="projects/project3.html" class="project-card">
-      <img src="images/project3.jpg" alt="Project 3" />
-      <div class="overlay">
-  <div class="overlay-text">
-    <h3>Pulse-Width Modulation</h3>
-    <p>ECSE 1010 - Group Project</p>
-  </div>
-</div>
-    </a>
-
-    
-    <a href="projects/project4.html" class="project-card">
-      <img src="images/simon.jpg" alt="Project 4" />
-     <div class="overlay">
-  <div class="overlay-text">
-    <h3>LED Memory Game</h3>
-    <p>Personal</p>
-  </div>
-</div>
-    </a>
-
-     <a href="projects/project5.html" class="project-card">
-      <img src="images/project5.PNG" alt="Project 5" />
-      <div class="overlay">
-  <div class="overlay-text">
-    <h3>BASYS Board Calculator</h3>
-    <p>ECSE 2610 - Group Project</p>
-  </div>
-</div>
-    </a>
-<!--
-   <a href="projects/project6.html" class="project-card">
-      <img src="images/project6.jpg" alt="Project 6" />
-   <div class="overlay">
-  <div class="overlay-text">
-    <h3>Project Title</h3>
-    <p>Short description here.</p>
-  </div>
-</div>
-    </a>
-
-    <div class="extra-projects hidden">
-
-       <a href="projects/project7.html" class="project-card">
-      <img src="images/project7.jpg" alt="Project 7" />
-    <div class="overlay">
-  <div class="overlay-text">
-    <h3>Project Title</h3>
-    <p>Short description here.</p>
-  </div>
-</div>
-    </a>
-
-       <a href="projects/project8.html" class="project-card">
-      <img src="images/project8.jpg" alt="Project 8" />
-     <div class="overlay">
-  <div class="overlay-text">
-    <h3>Project Title</h3>
-    <p>Short description here.</p>
-  </div>
-</div>
-    </a>
-      
+<section id="experience">
+    <div class="container">
+        <h2>Experience:</h2>
+        <div class="experience_grid">
+            <div class="exp-box">
+                <h3>Circuits:</h3>
+                <p>LTSpice, MATLAB / Simulink, oscilloscope, logic analyzer, multimeter, soldering and breadboarding</p>
+            </div>
+            <div class="exp-box">
+                <h3>Programming:</h3>
+                <p>C, C++, Python, MATLAB, Arduino, Xilinx Vivado (VHDL)</p>
+            </div>
+            <div class="exp-box">
+                <h3>Digital Logic:</h3>
+                <p>Finite state machine design, flip-flops, registers, multiplexers, decoders, timing, clocking, and enable logic</p>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <button id="toggleProjects" class="btn">See All Projects</button>
-
--->
 </section>
 
+<section id="projects">
+    <div class="container">
+        <h2>Projects:</h2>
+        <div class="project_grid">
 
-  
-
- <section id="resume" class="fade-in">
-  
-  
-
-
-
-
-  <img class="profile-pic resume-img" src="Colin_DeChambeau.jpg" alt="Resume">
-
-  <a href="Colin_DeChambeau.jpg" download class="resume-download">
-  Download Resume
+            <!-- Project 1: Replace 'project1-img.jpg' with your actual image -->
+       <a href="project1.html" class="project-card">
+    <video autoplay muted loop playsinline class="project-video">
+        <source src="project1_video.mp4" type="video/mp4">
+    </video>
+    <div class="project-img-placeholder">
+        <span>Project 1</span>
+    </div>
+    <div class="project-overlay">
+        <h3>Motion Activated Gate</h3>
+        <p>Designed and built a motion activated gate using an ESP32 microcontroller, ultrasonic sensor, and servo motor.</p>
+    </div>
 </a>
-</div>
-      
 
-    
-
-      
+            <!-- Project 2: Replace 'project2-img.jpg' with your actual image -->
+      <a href="project2.html" class="project-card">
+    <video autoplay muted loop playsinline class="project-video">
+        <source src="PWM.mp4" type="video/mp4">
+    </video>
+    <div class="project-img-placeholder">
+        <span>Project 2</span>
     </div>
+    <div class="project-overlay">
+        <h3>Pulse Width Modulation</h3>
+        <p>Worked in a group of 3 at RPI to demonstrate PWM control of an LED using an Arduino.</p>
+    </div>
+</a>
 
-  </div>
+      <a href="project3.html" class="project-card">
+    <video autoplay muted loop playsinline class="project-video">
+        <source src="Sensor_Alarm.mp4" type="video/mp4">
+    </video>
+    <div class="project-img-placeholder">
+        <span>Project 3</span>
+    </div>
+    <div class="project-overlay">
+        <h3>Sensor and Alarm System</h3>
+        <p>Worked in a group of 3 at RPI to design and build a circuit that senses change in light (through the use of a
+photoresistor in a Wheatstone bridge), which is amplified and used to trigger an LED alarm.</p>
+    </div>
+</a>
+
+ <a href="project4.html" class="project-card">
+    <image src="image.png" class="project-video" style="object-fit: cover; object-position: center bottom;">
+    <div class="project-img-placeholder">
+        <span>Project 4</span>
+    </div>
+    <div class="project-overlay">
+        <h3>Analog Synthesizer - VCO</h3>
+        <p>Worked in a group of 3 at RPI to design and build an analog voltage-controlled oscillator (VCO) that is able to produce both a square wave and triangle wave and change frequency.</p>
+    </div>
+</a>
+
+ <a href="project5.html" class="project-card">
+    <video autoplay muted loop playsinline class="project-video" style="object-position: center center;">
+        <source src="LED.mp4" type="video/mp4">
+    </video>
+    <div class="project-img-placeholder">
+        <span>Project 5</span>
+    </div>
+    <div class="project-overlay">
+        <h3>LED Memory Game</h3>
+        <p>Created a call and response game that generates a random sequence of LED flashes that the user has to remember. Four different game modes with LCD screen display. Circuit powered by ESP32 Microcontroller.</p>
+    </div>
+</a>
+
+ <a href="project6.html" class="project-card">
+    <image src="project5.PNG" alt="BASYS Board Overview" class="project-video" style="object-fit: cover; object-position: center center;">
+    </video>
+    <div class="project-img-placeholder">
+        <span>Project 6</span>
+    </div>
+    <div class="project-overlay">
+        <h3>BASYS Board Calculator</h3>
+        <p>Created a multi-mode switch controlled calculator capable of four bit adding, subtracting (with overflow indicator LED), comparator, and NAND operations. Programmed using VHDL in Vivado on the BASYS 3 board.</p>
+    </div>
+</a>
+
+ <a href="project7.html" class="project-card">
+    <image src="hazard.PNG" alt="Hazard" class="project-video" style="object-fit: cover; object-position: center bottom;">
+    </video>
+    <div class="project-img-placeholder">
+        <span>Project 7</span>
+    </div>
+    <div class="project-overlay">
+        <h3>Logic Circuit / Hazard Corrections</h3>
+        <p>Worked in a group of 3 at RPI to identify and correct hazards in a combinational logic circuit using Karnaugh maps and Boolean algebra.</p>
+    </div>
+</a>
+
+ <a href="project8.html" class="project-card">
+    <image src="PID.PNG" alt="PID Control" class="project-video" style="object-fit: cover; object-position: center center;">
+    </video>
+    <div class="project-img-placeholder">
+        <span>Project 8</span>
+    </div>
+    <div class="project-overlay">
+        <h3>PID Control</h3>
+        <p>Worked in a group of 2 at RPI to program a microcontroller powered car and make corrections using PID control.</p>
+    </div>
+</a>
+
+        </div>
+    </div>
 </section>
 
-
- <section id="contact" class="contact-grid fade-in">
-  <div class="contact-left">
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out with any questions or concerns!</p>
-    <form action="https://formspree.io/f/myzwovnb" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
-
-<div class="contact-right">
-  <h2>Find Me On</h2>
-  <div class="contact-buttons">
-    <a href="https://www.linkedin.com/in/colin-dechambeau-730280368/" target="_blank" class="contact-button linkedin">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="contact-icon">
-      LinkedIn
-    </a>
-    <a href="https://app.joinhandshake.com/profiles/n8ms3x" target="_blank" class="contact-button handshake">
-      <img src="https://play-lh.googleusercontent.com/0fvQuOYITqCNi9cDAUx8LL-_WPOUhwKR8APSMONlhm41jW-TQ0APHNXPuNELE-RblQ" alt="Handshake" class="contact-icon">
-      Handshake
-    </a>
-      <a href="https://github.com/dech224" target="_blank" class="contact-button github">
-      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github" class="contact-icon">
-      Github
-    </a>
-  </div>
-</div>
-
-<div>
-
-</div>
-
+<section id="contact">
+    <div class="container">
+        <h2>Contact:</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <span>Email</span>
+                <a href="mailto:dechambeau.colin@gmail.com">dechambeau.colin@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/colin-dechambeau/" target="_blank">linkedin.com/in/colin-dechambeau</a>
+            </div>
+            <div class="contact-item">
+                <span>Handshake</span>
+                <a href="https://rpi.joinhandshake.com/profiles/dechambeau_colin" target="_blank">rpi.joinhandshake.com/profiles/dechambeau_colin</a>
+            </div>
+               <div class="contact-item">
+                <span>GitHub</span>
+                <a href="https://github.com/dech224" target="_blank">github.com/dech224</a>
+            </div>
+            <div class="contact-item">
+                <span>Location</span>
+                <p>East Bridgewater, MA</p>
+            </div>
+        </div>
+    </div>
 </section>
-  <footer>
-    <p>© 2025 Colin DeChambeau</p>
-  </footer>
-
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-
-    const appearOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-
-   
-  </script>
-
-<script>
-  const cursorLight = document.querySelector('.cursor_light');
-
-  document.addEventListener('mousemove', (e) => {
-    cursorLight.style.top = `${e.clientY}px`;
-    cursorLight.style.left = `${e.clientX}px`;
-  });
-</script>
-
-<script>
-  const toggleBtn = document.getElementById('toggleProjects');
-  const extraProjects = document.querySelector('.extra-projects');
-
-  toggleBtn.addEventListener('click', () => {
-    extraProjects.classList.toggle('show');
-    toggleBtn.textContent = extraProjects.classList.contains('show') ? "Show Less" : "See All Projects";
-  });
-</script>
-
-<script>
-  function applyAccent(mode) {
-    const r = document.documentElement.style;
-
-    if (mode === "cool" || mode === "cool-mode") {
-      r.setProperty('--accent-color', '#74c0ff');
-      r.setProperty('--text-color', '#002244');
-      r.setProperty('--btn-hover', '#5aadee');
-    } else if (mode === "warm" || mode === "warm-mode") {
-      r.setProperty('--accent-color', '#f4a261');
-      r.setProperty('--text-color', '#442200');
-      r.setProperty('--btn-hover', '#dd8a42');
-    } else if (mode === "dark" || mode === "dark-mode") {
-      r.setProperty('--accent-color', '#76a9fa');
-      r.setProperty('--text-color', '#e5e5e5');
-      r.setProperty('--btn-hover', '#3c3f41');
-    } else {
-      r.setProperty('--accent-color', '#1f5ab0');
-      r.setProperty('--text-color', '#111');
-      r.setProperty('--btn-hover', '#2563eb');
-    }
-  }
-
-  const savedTheme = localStorage.getItem('activeTheme') || 'default';
-  document.body.classList.add(savedTheme + '-mode');
-  applyAccent(savedTheme);
-</script>
-
-<script>
-  const images = [
-    "images/photo2.jpg",
-    "images/photo3.jpg",
-    "images/photo4.jpg",
-    "images/photo5.jpg",
-    "images/photo6.jpg",
-    "images/photo7.jpg",
-    "images/photo8.jpg",
-    "images/photo9.jpg",
-    "images/photo10.jpg",
-    "images/Colin_Tri1.jpg",
-    "images/Colin_Tri2.jpg",
-  ];
-
-  let index = 0;
-  const slideshow = document.getElementById('slideshow');
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    slideshow.style.opacity = 0;
-    setTimeout(() => {
-  slideshow.src = images[index];
-  slideshow.style.opacity = 1;
-}, 800); // match fade-out time with CSS (1.2s total); // fade out before changing
-  }, 5000); // switch every 5 seconds
-</script>
-
-
 
 </body>
 </html>

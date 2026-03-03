@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse-Width Modulation - Colin DeChambeau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-page-section {
+            background-color: #f0f4f8;
+        }
+        .project-page-section h2 {
+            color: #1a3a5f;
+            margin-top: 40px;
+            text-align: left;
+        }
+        .project-page-section h2:first-child {
+            margin-top: 0;
+        }
+        .project-page-section h3 {
+            color: #1a3a5f;
+            margin-top: 40px;
+        }
+        .project-page-section p,
+        .project-page-section li {
+            color: #2c3e50;
+        }
+        .project-video-full {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .project-pdf {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container nav-flex">
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="Colin DeChambeau, Electrical Engineering.pdf" target="_blank" class="nav-link">Resume</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div class="header-text">
+            <h1>Pulse-Width Modulation</h1>
+        </div>
+    </div>
+</header>
+
+<section class="project-page-section">
+    <div class="container">
+
+        <h3>Project Presentation</h3>
+        <iframe src="PWM.pdf" class="project-pdf"></iframe>
+
+        <video autoplay loop muted playsinline class="project-video-full">
+            <source src="PWM.mp4" type="video/mp4">
+        </video>
+
+    </div>
+</section>
+
+</body>
+</html>

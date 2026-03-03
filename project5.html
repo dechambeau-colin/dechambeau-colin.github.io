@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Memory Game - Colin DeChambeau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-page-section {
+            background-color: #f0f4f8;
+        }
+        .project-page-section h2 {
+            color: #1a3a5f;
+            margin-top: 40px;
+            text-align: left;
+        }
+        .project-page-section h2:first-child {
+            margin-top: 0;
+        }
+        .project-page-section p,
+        .project-page-section li {
+            color: #2c3e50;
+        }
+        .project-page-section ul {
+            padding-left: 20px;
+        }
+        .project-video-full {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+            padding: 12px 24px;
+            background-color: #1a3a5f;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        .github-button:hover {
+            background-color: #244a77;
+        }
+        .github-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container nav-flex">
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="Colin DeChambeau, Electrical Engineering.pdf" target="_blank" class="nav-link">Resume</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div class="header-text">
+            <h1>LED Memory Game</h1>
+            <p>Call and response game that generates a random sequence of LED flashes that the user has to remember. Four different game modes with LCD screen display. Circuit powered by ESP32 Microcontroller.</p>
+        </div>
+    </div>
+</header>
+
+<section class="project-page-section">
+    <div class="container">
+
+       <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; margin-top: 30px;">
+    <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: center center;">
+        <source src="LED.mp4" type="video/mp4">
+    </video>
+</div>
+        <h2>How It Works</h2>
+        <p>The ESP32 generates a random sequence of LED flashes that the player must memorize and repeat back by pressing the matching buttons. Each round, the sequence grows longer, increasing the difficulty. An LCD screen displays the current game mode and feedback. There are four different modes: normal mode, hard mode (faster), increase mode (gradual spike in difficulty), and Impossible Mode (much faster). The game continues until the player makes an error.</p>
+
+        <h2>Skills Used</h2>
+        <ul>
+            <li>Random sequence generation and memory logic in C++</li>
+            <li>LED and button interfacing with debouncing</li>
+            <li>LCD (I2C) display integration for modes and feedback</li>
+            <li>Game state management with multiple difficulty modes</li>
+            <li>Microcontroller programming (ESP32)</li>
+        </ul>
+
+        <h2>Hardware</h2>
+        <ul>
+            <li>ESP32 Dev Board</li>
+            <li>4x Resistors (2x 220 ohms, 1x 330 ohms, 1x 1.1k ohms for LEDs, 1x 220 ohms for Passive Buzzer)</li>
+            <li>4x LEDs (Red, Yellow, Green, and Blue)</li>
+            <li>1x Passive Buzzer</li>
+            <li>4x Pushbuttons</li>
+            <li>Breadboard & Jumper Wires</li>
+        </ul>
+
+        <a href="https://github.com/dech224/LED-Memory-Game" target="_blank" class="github-button">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+            View on GitHub
+        </a>
+
+    </div>
+</section>
+
+</body>
+</html>

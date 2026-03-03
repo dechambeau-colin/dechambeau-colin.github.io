@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Motion Activated Gate - Colin DeChambeau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-page-section {
+            background-color: #f0f4f8;
+        }
+
+        .project-page-section h2 {
+            color: #1a3a5f;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .project-page-section h2:first-child {
+            margin-top: 0;
+        }
+
+        .project-page-section p,
+        .project-page-section li {
+            color: #2c3e50;
+        }
+
+        .project-page-section ul {
+            padding-left: 20px;
+        }
+
+        .image-row {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .half-img {
+            width: calc(50% - 10px);
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        .project-video-full {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .project-diagram {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+            padding: 12px 24px;
+            background-color: #1a3a5f;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .github-button:hover {
+            background-color: #244a77;
+        }
+
+        .github-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container nav-flex">
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="Colin DeChambeau, Electrical Engineering.pdf" target="_blank" class="nav-link">Resume</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div class="header-text">
+            <h1>Motion Activated Gate</h1>
+            <p>ESP32 powered circuit that uses an ultrasonic sensor and micro servo motor to create a motion activated gate. When a car approaches within the 15 cm threshold, the gate automatically opens.</p>
+        </div>
+    </div>
+</header>
+
+<section class="project-page-section">
+    <div class="container">
+
+
+
+        <video autoplay loop muted playsinline class="project-video-full">
+            <source src="project1_video.mp4" type="video/mp4">
+        </video>
+
+        <h2>How It Works</h2>
+        <p>The ultrasonic sensor continuously checks distance. If an object is detected closer than a threshold (15 cm), the ESP32 activates the servo. The servo rotates to open the gate. After a short delay, the servo resets to close the gate. LEDs indicate gate state (red = closed, green = open).</p>
+
+        <h2>Skills Used</h2>
+        <ul>
+            <li>Ultrasonic distance sensing (HC-SR04)</li>
+            <li>Servo-controlled gate movement (SG90)</li>
+            <li>Voltage divider for safe sensor input</li>
+            <li>Microcontroller use (ESP32)</li>
+            <li>C++</li>
+        </ul>
+
+        <h2>Hardware</h2>
+        <ul>
+            <li>ESP32 Dev Board</li>
+            <li>SG90 Servo Motor</li>
+            <li>HC-SR04 Ultrasonic Sensor</li>
+            <li>4x Resistors (1k ohm + 2k ohm for voltage divider, 2x 220 ohms for LEDs)</li>
+            <li>2x LEDs (Red and Green)</li>
+            <li>Breadboard & Jumper Wires</li>
+            <li>Power Supply (5V)</li>
+        </ul>
+
+        <h2>Circuit Diagram</h2>
+        <img src="project1_diagram.jpg" alt="Circuit Diagram" class="project-diagram">
+
+        <h2>Voltage Divider</h2>
+        <p>I used the Voltage Divider Equation:</p>
+        <p>\[ V_{out} = V_{in} \times \frac{R_2}{R_1 + R_2} \]</p>
+        <p>To solve for the resistor ratio when dropping from 5V to 3.3V:</p>
+        <p>\[ \frac{R_1}{R_2} = \frac{V_{\text{in}}}{V_{\text{out}}} - 1 = \frac{5}{3.3} - 1 = 0.515 \]</p>
+        <p>This means \( R_1 = 0.515 \cdot R_2 \). I opted for \( R_2 = 2k\Omega \), making \( R_1 \approx 1k\Omega \).</p>
+
+        <h2>Distance Equation</h2>
+        <p>I took the time for the ultrasonic sensor's echo to return and calculated distance from the sensor to the object. The speed of sound is approximately 343 m/s = 0.0343 cm/μs. Dividing by two accounts for the round trip:</p>
+        <p>\[ \text{Distance} = \frac{\text{duration} \times 0.034}{2} \]</p>
+        <p>\[ \texttt{float dist = duration * 0.034 / 2;} \]</p>
+
+        <h2>Gate Logic</h2>
+        <p>If an object is less than 15 cm away the green LED turns on, the red LED turns off, and the gate opens. When an object is more than 15 cm away the green LED turns off, the red LED turns on, and the gate closes.</p>
+        <p>\[
+        \begin{aligned}
+        &\texttt{if (dist < 15) \{} \\
+        &\quad \texttt{digitalWrite(LED\_Green, HIGH);} \\
+        &\quad \texttt{digitalWrite(LED\_Red, LOW);} \\
+        &\quad \texttt{myServo.write(0);} \\
+        &\texttt{\} else \{} \\
+        &\quad \texttt{digitalWrite(LED\_Green, LOW);} \\
+        &\quad \texttt{digitalWrite(LED\_Red, HIGH);} \\
+        &\quad \texttt{myServo.write(90);} \\
+        &\texttt{\}}
+        \end{aligned}
+        \]</p>
+
+        <a href="https://github.com/dech224/ESP32-Motion-Activated-Gate" target="_blank" class="github-button">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+            View on GitHub
+        </a>
+
+    </div>
+</section>
+
+</body>
+</html>
